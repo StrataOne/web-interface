@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+/* GENERAL STYLE */
+*{
+    box-shadow: none !important;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;    
+    background-color:#E9C92A;
+    ;
+}
+li{
+    list-style-type: none;
+}
+.center{
+    text-align: center;
+}
+.right{
+    /* margin-left: auto !important; */
+    text-align: right !important;
+}
+.left{
+    /* margin-right: auto !important; */
+    text-align: left !important;
+}
+.btn-style{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.081px;
+    line-height: 100%;
+    /* identical to box height, or 17px */
+    text-align: center;
+    color: #000000;
+    background: linear-gradient(225deg, #FFFFFF 14.89%, #FFFFFF 35.59%, #FFFFFF 85.85%);
+    border-radius: 10.6756px;
+    padding: 21.35px 36.3px;
+    margin-top: 33.4px;
+}
+
+.btn-style-2{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15.4534px;
+    line-height: 103.02%;
+    /* identical to box height, or 17px */
+    text-align: center;
+    color: #867100;
+    background: linear-gradient(225deg, #FFFFFF 14.89%, #FFFFFF 35.59%, #FFFFFF 85.85%);
+    border-radius: 10.6756px;
+    padding-top: 20.3px !important;
+    padding-bottom: 20.3px !important;
+    padding-left: 25.35px !important;
+    padding-right: 25.35px !important;
+    margin-bottom: 191.73px;
+    background: #FFFFFF;
+    border-radius: 30.9593px;
+}
+.btn-style-3{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25.3309px;
+    line-height: 38px;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    background: linear-gradient(90deg, #FF7676 11.48%, rgba(233, 201, 42, 0.9) 95.39%);
+    border-radius: 14px;
+    margin-top: 32px;
+}
+.btn-style-4{
+    padding: 31px 89px;
+    background: #3B372B;
+    border-radius: 55px;
+}
+.btn-style-5{
+    font-family: 'Poppins', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 42.0291px;
+line-height: 103.02%;
+/* or 43px */
+color: #FFFFFF;
+padding: 13px 39px;
+background: linear-gradient(90deg, #FF8D8D 27.52%, #E9C92A 100%);
+border-radius: 14.6569px;
+margin-top: 33.93px;
+margin-bottom: 44.99px;
+}
+.nav-link{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.9792px;
+    line-height: 30px;
+    color: #FFFFFF;
+    padding-top: 35.75px;
+}
+.navbar-brand{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 31.0679px;
+    line-height: 38px;
+    color: #E9C92A !important;
+    padding-top: 31.25px;
+
+}
+.logo{
+    width: 48.27px;
+    Height: 48.2px;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+.menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+    padding-top: 22px;
+  }
+  .line {
+    fill: none;
+    stroke: white;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  
+
+/* HERO SECTION */
+#hero{
+    padding-bottom: 36.39px;
+    background: url("../images/hero5.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#hero h1{
+    padding-top: 200px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 90.7429px;
+    line-height: 130%;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F3DD16 232.58%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+}
+#hero p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17.081px;
+    line-height: 150%;
+    /* or 26px */
+    text-align: center;
+    color: #FFFFFF;
+}
+#hero .cursor{
+    padding-top: 51.8px;
+    padding-bottom: 36.39px;
+    margin: 0;
+}
+/* LIST OF ASSETS */
+#list-of-assets{
+    padding-top: 26.365px;
+    padding-bottom: 26.365px;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,75,24,0.62) 30%, rgba(255,65,23,1) 100%);
+}
+#list-of-assets p{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20.1966px;
+    line-height: 30px;
+    text-align: center;
+    background: linear-gradient(90.77deg, #FFC10B 23.69%, #FF0B0B 66.8%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   text-fill-color: transparent;
+   padding: 0;
+   margin: 0;
+   text-transform: uppercase;
+
+}
+#list-of-assets div i{
+    padding-top: 30px !important;
+    color: white !important;
+}
+#list-of-assets .asset-name{
+    padding-top: 26px !important;
+}
+#list-of-assets .asset-mcap{
+    padding-bottom: 26px !important;
+}
+#list-of-assets .assets{
+    background: rgba(35, 29, 26, 0.63);
+    border: 0.794791px solid rgba(255, 255, 255, 0.1);
+    border-radius: 23.8437px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#list-of-assets .tiny-space{
+    padding: 23.605px 1.55px !important;
+}
+#list-of-assets i{
+    font-size: 50px;
+    padding: 40px;
+    color: white !important;
+}
+/* 24/7 ACCESS */
+/* DEPOSIT TO EARN */
+#deposit-to-earn{
+    background-color: #3B372B;
+}
+#deposit-to-earn .deposit-to-earn{
+    background: linear-gradient(90deg, #E9C92A -52.45%, rgba(217, 217, 217, 0) 68.85%);
+}
+#deposit-to-earn h2{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 68.3241px;
+    line-height: 130%;
+    color: #FFFFFF;
+    padding-top: 77.93px;
+
+}
+#deposit-to-earn p{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25.6215px;
+    line-height: 130%;
+    color: #FFFFFF;
+    padding-bottom: 195.55px;
+    padding-top: 5.62px;
+}
+
+
+/* TENDERMINT DELEGATOR */
+#tendermint-delegate{
+    background-color: #3B372B;
+}
+#tendermint-delegate .bg-tendermint{
+    border-radius: 0px 0px 134.513px 134.513px;
+    background: linear-gradient(180deg, #3B372B 37.03%, rgba(217, 217, 217, 0) 100%);
+    background: linear-gradient(180.1deg, rgba(255, 46, 46, 0) 26.46%, rgba(148, 111, 0, 0.18) 99.91%);
+
+
+}
+#tendermint-delegate h3{
+    font-family: 'Poppins', sans-serif;    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30.6801px;
+    line-height: 103.02%;
+    /* identical to box height, or 64px */
+    text-align: center;
+    background: linear-gradient(180deg, #FFFFFF 0%, #2B2C3B 126.67%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 47.03px;
+    padding-top: 140.79px;
+}
+#tendermint-delegate h2{
+    font-family: 'Poppins', sans-serif;    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40.1244px;
+    line-height: 103.02%;
+    /* identical to box height, or 95px */
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 6.37799px 19.134px #E9C92A;
+    padding-bottom: 107.84px;
+    margin-bottom: 0;
+}
+/* WHAT TO STAKE */
+#what-to-stake{
+    background: url("/images/stake.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#what-to-stake .what-to-stake-title{
+    background-color: #3B372B;
+    /* background-image: url("/images/stake-bg.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#what-to-stake .stake-contain{
+    background: linear-gradient(180deg, rgba(233, 201, 42, 0) 0%, #CF9303 100%);
+    border-radius: 0px 0px 124px 124px;
+}
+#what-to-stake .stake-padding{
+    padding-top: 219px;
+}
+#what-to-stake .h2-1{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 57.0526px;
+    line-height: 69px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 185px;
+    padding-bottom: 13px;
+}
+#what-to-stake .h2-2{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 37.479px;
+    line-height: 56px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 21px;
+    padding-bottom: 41px;
+    text-shadow: 0px 2.62768px 11.1676px #362600;
+}
+#what-to-stake .h2-3{
+    /* background: url("/images/stake.gif");  */
+    /* background-position: center;  */
+    /* background-repeat: no-repeat;  */
+    /* background-size: cover;  */
+    padding-bottom: 48px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 47.3266px;
+    line-height: 71px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 3.3181px 14.1019px #362600;
+}
+#what-to-stake .talk{
+    padding-bottom: 31px;
+}
+/* WHAT STRATA ON CAN DO  */
+#what-strata-one-can-do{
+    background-color: #3B372B;
+}
+#what-strata-one-can-do h2{
+    font-family: 'Poppins', sans-serif;    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 70.4915px;
+    line-height: 106px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 14px #E9C92A;
+    padding-top: 141px;
+}
+#what-strata-one-can-do .can-do{
+    padding-top: 23.05px;
+    padding-bottom: 122.88;
+    background: linear-gradient(180deg, rgba(134, 113, 0, 0) 0%, #867100 52.6%, rgba(243, 221, 22, 0.4) 96.35%);
+    backdrop-filter: blur(17.081px);
+    border-radius: 32.0269px;
+    padding-left: 13.49px;
+    padding-right: 13.49px;
+}
+#what-strata-one-can-do .can-do h3{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35.9954px;
+    line-height: 204.02%;
+    text-align: center;
+    background: linear-gradient(90deg, #FF7C7C -11.88%, #F4A254 80.55%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+#what-strata-one-can-do .can-do p{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21.6959px;
+    line-height: 204.02%;
+    text-align: center;
+    color: #FFFFFF;
+    padding-bottom: 87.88px;
+}
+#what-strata-one-can-do .can-do-padding{
+    padding-bottom: 188.42px;
+    padding-top: 99.4px;
+}
+/* WHAT IS STAKING */
+#what-is-staking{
+    background-color: white;
+}
+#what-is-staking .what-is-staking{
+    background-color: #3B372B;
+    background: linear-gradient(270.66deg, #3B372B 35.84%, rgba(217, 217, 217, 0) 102.65%);
+}
+#what-is-staking h2{
+    font-family: 'Poppins', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 79.8847px;
+line-height: 103.02%;
+/* or 82px */
+color: #FFFFFF;
+text-shadow: 0px 4.27025px 16.0135px #44BA1B;
+padding-top: 44.6px;
+}
+#what-is-staking p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 24.6607px;
+line-height: 147.02%;
+/* or 36px */
+color: #FFFFFF;
+}
+/* WHY STAKE WITH STRATA ONE */
+#why-stake-with-strata-one{
+background-color: #3B372B;
+}
+#why-stake-with-strata-one h3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42.0291px;
+    line-height: 113.52%;
+    /* or 48px */
+    color: #FFFFFF;
+    
+}
+#why-stake-with-strata-one h2{
+    font-family: 'Poppins', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 86.0863px;
+line-height: 113.52%;
+color: #FFFFFF;
+text-shadow: 0px 4.27025px 22.4188px #E9C92A;
+
+    
+}
+#why-stake-with-strata-one p{
+    font-family: 'Poppins', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 28.6296px;
+line-height: 204.02%;
+color: #FFFFFF;
+}
+
+#why-stake-with-strata-one li{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30.8473px;
+    line-height: 72px;
+    color: #FFFFFF;
+    padding-top: 65.92px;
+    padding-bottom: 23.71px;
+}
+
+#why-stake-with-strata-one .row{
+    background-image: url("/images/stake-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#why-stake-with-strata-one .stack-with-bg{
+    padding-top: 98.83px;
+    padding-bottom: 225.11px;
+}
+#why-stake-with-strata-one .stake-with-top-space{
+    height: 139.4px;
+    background-color: #3B372B;
+    background-image: url("/images/stake-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#why-stake-with-strata-one .stake-with-bottom-space{
+    height: 225.11px;
+}
+/* OUR EXPERTS */
+#our-expert{
+    background-color: #3B372B;
+}
+#our-expert .main-row{
+    padding-bottom: 162.97px;
+}
+#our-expert h2{
+font-family: 'Poppins', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 61.2318px;
+line-height: 92px;
+color: #FFFFFF;
+
+}
+#our-expert p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16.9178px;
+line-height: 301.5%;
+/* or 51px */
+color: #FFFFFF;
+
+}
+#our-expert .img{
+    height: 149.46px;
+    background-color: #D9D9D9;
+    border-radius: 10.6756px;
+    margin-bottom: 46.975px;
+}
+#our-expert .row-1{
+    margin-bottom: 46.975px;
+}
+#our-expert .row-2{
+    margin-top: 46.975px;
+}
+/* GOT ISSUES */
+#got-issues{
+    background-color: white;
+}
+#got-issues h2{
+    font-family: 'Poppins', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 79.8847px;
+line-height: 103.02%;
+color: #FFFFFF;
+text-shadow: 0px 4.27025px 16.0135px #44BA1B;
+padding-top: 45.45px;
+}
+#got-issues p{
+    font-family: 'Poppins' , sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 30.4px;
+line-height: 112.02%;
+/* or 34px */
+color: #FFFFFF;
+padding-bottom: 100px;
+}
+#got-issues .got-issues{
+    background: linear-gradient(270.66deg, #3B372B 35.84%, rgba(217, 217, 217, 0) 102.65%);
+}
+#got-issues .got-issues-space{
+    height: 214.93px;
+    background-color: #3B372B;
+}
+#got-issues .got-space{
+    background: linear-gradient(180deg, #3B372B 59.07%, rgba(38, 27, 12, 0) 89.3%);
+}
+/* FOOTER */
+#footer{
+
+}
+#footer h3{
+ font-family: 'DM Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 15.1762px;
+line-height: 27px;
+/* identical to box height, or 175% */
+/* Dark */
+color: #0A142F;
+padding-top: 84.42px;
+}
+#footer li{
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 15.1762px;
+line-height: 20px;
+/* identical to box height */
+/* Dark */
+color: #0A142F;
+opacity: 0.5;
+padding-left: 0;
+}
+#footer ul{
+    padding-left: 0;
+    padding-bottom: 55.02px;
+}
+#footer h2{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 22.0379px;
+line-height: 27px;
+/* identical to box height */
+color: #FFFFFF;
+}
+#footer p{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15.1762px;
+line-height: 25px;
+/* identical to box height, or 163% */
+text-align: center;
+/* Dark */
+color: #0A142F;
+}
+#footer img{
+    width: 39.05px;
+}
+#footer .logo-space{
+    padding-right: 23.93px;
+}
+#footer i{
+    color: #0A142F;
+    font-size: 19px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 25.8px;
+    padding-bottom: 76.66px;
+}

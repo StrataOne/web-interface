@@ -1,0 +1,16 @@
+User-agent: *
+Disallow: /sign-up
+Disallow: /sign-in
+Disallow: /dashboard/
+Disallow: /dashboard/*
+Disallow: /dashboard/*/
+Disallow: /thanks
+Disallow: /sign-up
+Noindex: /sign-up
+Noindex: /sign-in
+Noindex: /dashboard/
+Noindex: /dashboard/*
+Noindex: /dashboard/*/
+Noindex: /thanks
+Noindex: /sign-up
+
