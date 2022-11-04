@@ -20,6 +20,6 @@ app.get("/", async (req, res) =>{
 
 // SERVER
 app.listen(process.env.PORT || 3000, "0.0.0.0", () => {
-    console.log("App Started");
+    console.log(`App running on port ${process.env.PORT || 3000}`);
   });
   
