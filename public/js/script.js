@@ -26,7 +26,6 @@ if(  $("#statistics").is(":visible") == true )
     animate(text3, 100, 3845777, 5000);    
 }
 // HARMONY BLOCKCHAIN
-
 function harmonyDetails() {
     $.ajax({
       type: "POST",
@@ -61,8 +60,75 @@ function harmonyDetails() {
       },
     });
   }
-  
+
+// OASIS BLOCKCHAIN
+function oasisDetails() {
+  $.ajax({
+    type: "GET",
+    url: "https://api.oasismonitor.com/data/validator/oasis1qp4tj3u9qkcgjqrrjvwljrqcyx3g5ygjqgtm37t3",
+    headers: {"Content-Type": "application/json"},
+    timeout: 5000,
+    success: function (data) {
+        let totalApr = 0.5;
+        let totalDelegation = Math.floor(parseInt(data.delegations_balance).toFixed(7));
+        let totalDelegators = data.depositors_count;
+        let lockup = NaN;
+      console.log("OASIS BLOCKCHAIN");
+      console.log("=======================================================================");
+      console.log("Total Delegations:" + totalDelegation + ";    APR:" + totalApr + ";    Lock Up:" + lockup + ";    Total Delegators:" + totalDelegators);
+      console.log("=======================================================================");
+    },
+    error: function (err) {
+      console.log(err);
+    },
+  });
+}
+
+// PERSISTENCE
+function persistenceDetails() {
+  $.ajax({
+    type: "GET",
+    url: "https://rest.core.persistence.one/staking/validators",
+    headers: {"Content-Type": "application/json"},
+    timeout: 5000,
+    success: function (data) {
+      let mainData = data.result.find(e => e.operator_address === 'persistencevaloper109yg6yhcyy5mfyteqmcn3pjca9nu9s39fxwh07');
+      let totalDelegation = Math.floor(parseInt(mainData.delegator_shares).toFixed(5));
+      let totalApr = parseFloat(mainData.commission.commission_rates.max_rate).toFixed(2);
+      let lockup = NaN;
+      console.log("PESISTENCE BLOCKCHAIN");
+      console.log("=======================================================================");
+      console.log("Total Delegations:" + totalDelegation + ";    APR:" + totalApr + ";    Lock Up:" + lockup);
+      console.log("=======================================================================");
+    },
+    error: function (err) {
+      console.log(err);
+    },
+  });
+  $.ajax({
+    type: "GET",
+    url: "https://rest.core.persistence.one/staking/validators/persistencevaloper109yg6yhcyy5mfyteqmcn3pjca9nu9s39fxwh07/delegations",
+    headers: {"Content-Type": "application/json"},
+    timeout: 5000,
+    success: function (data) {
+      let totalDelegators = data.result.length;
+      console.log("PESISTENCE BLOCKCHAIN");
+      console.log("=======================================================================");
+      console.log("Total Delegators:" + totalDelegators);
+      console.log("=======================================================================");
+    },
+    error: function (err) {
+      console.log(err);
+    },
+  });
+}
+
+
+
+
   $(".btn-style").on("click", function (event) {
     harmonyDetails();
+    oasisDetails();
+    persistenceDetails();
   });
   
