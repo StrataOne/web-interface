@@ -23,11 +23,11 @@ const {
 //     },
 // );
 
-// hmy.blockchain
-  .getBalance({ address: 'one103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7' })
-  .then((response) => {
-    console.log('balance in ONEs: ' + fromWei(hexToNumber(response.result), Units.one));
-  });
+// // hmy.blockchain
+//   .getBalance({ address: 'one103q7qe5t2505lypvltkqtddaef5tzfxwsse4z7' })
+//   .then((response) => {
+//     console.log('balance in ONEs: ' + fromWei(hexToNumber(response.result), Units.one));
+//   });
 
 app.set("view engine", "ejs");
 app.set('layout', 'layout');
