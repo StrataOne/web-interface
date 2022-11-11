@@ -206,7 +206,7 @@ margin-bottom: 44.99px;
 }
 /* ABOUT US */
 #about-us{
-    background-color: #e9c92ada;
+    background-color: #d1bc20bc;
     background-image: url("/images/stats-bg-2.png");
     padding-top: 100px;
     padding-bottom: 100px;
@@ -221,7 +221,7 @@ margin-bottom: 44.99px;
 #about-us p{
     font-size: 20px;
     line-height: 40px;
-    color: #2b2c3b69;
+    color: #FFFFFF;
     padding-bottom: 20px;
 }
 /* LIST OF ASSETS */
@@ -229,7 +229,7 @@ margin-bottom: 44.99px;
     padding-top: 26.365px;
     padding-bottom: 26.365px;
     background: rgb(0,0,0);
-    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,75,24,0.62) 30%, rgba(255,65,23,1) 100%);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255, 74, 24, 0.152).62).62) 30%, rgba(255,65,23,1) 100%);
 }
 #list-of-assets p{
     font-family: 'Inter', sans-serif;
