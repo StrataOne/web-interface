@@ -229,7 +229,7 @@ margin-bottom: 44.99px;
     padding-top: 26.365px;
     padding-bottom: 26.365px;
     background: rgb(0,0,0);
-    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,75,24,0.62) 30%, rgba(255,65,23,1) 100%);
+    /* background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,75,24,0.62) 30%, rgba(255,65,23,1) 100%); */
 }
 #list-of-assets p{
     font-family: 'Inter', sans-serif;
