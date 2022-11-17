@@ -45,7 +45,8 @@ function harmonyDetails() {
         let totalDelegation = data.result["total-delegation"];
         let totalDelegators = data.result.validator.delegations;
         let lockup = 0;
-        let totalApr = parseFloat(apr).toFixed(2);
+        let totalApr = apr * 100;
+        totalApr = parseFloat(totalApr).toFixed(2);
         let removingExponential = totalDelegation / (10**24);
         let total = Math.floor(parseInt(removingExponential * 1000000).toFixed(7));
         totalDelegation = total;
@@ -63,7 +64,7 @@ function harmonyDetails() {
       },
       error: function (err) {
         console.log(err);
-        $("#harmony-apy").html("0.08");
+        $("#harmony-apy").html("8.15");
         $("#harmony-total-delegation").html("7332799");
         $("#harmony-lockup").html("0");
       },
@@ -158,7 +159,7 @@ function findoraDetails() {
     success: function (data) {
         let totalApr = parseFloat(data.data.validator_realtime_apy[0]).toFixed(2);
         let totalDelegation = Math.floor(parseInt(data.data.voting_power).toFixed(7));
-        let removingExponential = totalApr / (10**37);
+        let removingExponential = totalApr / (10**36);
         let total = parseFloat(removingExponential).toFixed(2);
         totalApr = total;
         let str_totalD = totalDelegation.toString();
@@ -175,7 +176,7 @@ function findoraDetails() {
     },
     error: function (err) {
       console.log(err);
-      $("#findora-apy").html("1.92");
+      $("#findora-apy").html("20.04");
       $("#findora-total-delegation").html("8920165");
       $("#findora-lockup").html("0");
     },
