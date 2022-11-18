@@ -4,6 +4,33 @@ const Coingecko = require("coingecko-api");
 const expressEjsLayout = require("express-ejs-layouts");
 const path = require("path");
 const CoinGeckoClient = new Coingecko();
+let dataFindoraPrice, dataPersistencePrice, dataVelasPrice, dataHarmonyPrice, dataOasisPrice;
+let minutes = 30, the_interval = minutes * 60 * 1000;
+async function priceCall() {
+  let dataFindora = await CoinGeckoClient.coins.fetch('findora', {});
+  let dataPersistence = await CoinGeckoClient.coins.fetch('persistence', {});
+  let dataVelas = await CoinGeckoClient.coins.fetch('velas', {});
+  let dataHarmony = await CoinGeckoClient.coins.fetch('harmony', {});
+  let dataOasis = await CoinGeckoClient.coins.fetch('oasis-network', {});
+  dataVelasPrice = parseFloat(dataVelas.data.market_data.current_price.usd).toFixed(3);
+  dataHarmonyPrice = parseFloat(dataHarmony.data.market_data.current_price.usd).toFixed(3);
+  dataOasisPrice = parseFloat(dataOasis.data.market_data.current_price.usd).toFixed(3);
+  dataPersistencePrice = parseFloat(dataPersistence.data.market_data.current_price.usd).toFixed(3);
+  dataFindoraPrice = parseFloat(dataFindora.data.market_data.current_price.usd).toFixed(3);
+}
+priceCall();
+ setInterval(async function() {
+  let dataFindora = await CoinGeckoClient.coins.fetch('findora', {});
+  let dataPersistence = await CoinGeckoClient.coins.fetch('persistence', {});
+  let dataVelas = await CoinGeckoClient.coins.fetch('velas', {});
+  let dataHarmony = await CoinGeckoClient.coins.fetch('harmony', {});
+  let dataOasis = await CoinGeckoClient.coins.fetch('oasis-network', {});
+  dataVelasPrice = parseFloat(dataVelas.data.market_data.current_price.usd).toFixed(3);
+  dataHarmonyPrice = parseFloat(dataHarmony.data.market_data.current_price.usd).toFixed(3);
+  dataOasisPrice = parseFloat(dataOasis.data.market_data.current_price.usd).toFixed(3);
+  dataPersistencePrice = parseFloat(dataPersistence.data.market_data.current_price.usd).toFixed(3);
+  dataFindoraPrice = parseFloat(dataFindora.data.market_data.current_price.usd).toFixed(3);
+}, the_interval);
 const { Harmony } = require('@harmony-js/core');
 const {
   ChainID,
@@ -37,17 +64,22 @@ app.use(expressEjsLayout);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.get("/", async (req, res) =>{
-  let dataFindora = await CoinGeckoClient.coins.fetch('findora', {});
-  let dataPersistence = await CoinGeckoClient.coins.fetch('persistence', {});
-  let dataVelas = await CoinGeckoClient.coins.fetch('velas', {});
-  let dataHarmony = await CoinGeckoClient.coins.fetch('harmony', {});
-  let dataOasis = await CoinGeckoClient.coins.fetch('oasis-network', {});
-  let dataFindoraPrice = parseFloat(dataFindora.data.market_data.current_price.usd).toFixed(3);
-  let dataPersistencePrice = parseFloat(dataPersistence.data.market_data.current_price.usd).toFixed(3);
-  let dataVelasPrice = parseFloat(dataVelas.data.market_data.current_price.usd).toFixed(3);
-  let dataHarmonyPrice = parseFloat(dataHarmony.data.market_data.current_price.usd).toFixed(3);
-  let dataOasisPrice = parseFloat(dataOasis.data.market_data.current_price.usd).toFixed(3);
-  res.render("home", {dataFindoraPrice, dataPersistencePrice, dataVelasPrice, dataHarmonyPrice, dataOasisPrice});
+  if(dataVelasPrice == undefined || dataVelasPrice == null|| dataVelasPrice == "" ){
+    dataVelasPrice = 0.022;
+  }
+  if(dataHarmonyPrice == undefined || dataHarmonyPrice == null|| dataHarmonyPrice == "" ){
+    dataHarmonyPrice = 0.014;
+  }
+  if(dataOasisPrice == undefined || dataOasisPrice == null|| dataOasisPrice == "" ){
+    dataOasisPrice = 0.047;
+  }
+  if(dataPersistencePrice == undefined || dataPersistencePrice == null|| dataPersistencePrice == "" ){
+    dataPersistencePrice = 0.578;
+  }
+  if(dataFindoraPrice == undefined || dataFindoraPrice == null|| dataFindoraPrice == "" ){
+    dataFindoraPrice = 0.002;
+  }
+  res.render("home",{dataVelasPrice, dataHarmonyPrice, dataOasisPrice, dataPersistencePrice, dataFindoraPrice});
 });
 
 

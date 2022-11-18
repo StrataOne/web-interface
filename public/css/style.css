@@ -73,7 +73,7 @@ a:hover{
     padding-bottom: 11px !important;
     padding-left: 18px !important;
     padding-right: 18px !important;
-    background: linear-gradient(90deg, #FF7676 11.48%, rgba(233, 201, 42, 0.9) 95.39%);
+    background: rgba(233, 201, 42, 0.9);
     border-radius: 14px;
     margin-top: 32px;
 }
@@ -89,12 +89,12 @@ a:hover{
     font-family: 'Poppins', sans-serif;
 font-style: normal;
 font-weight: 500;
-font-size: 42.0291px;
+font-size: 32.0291px;
 line-height: 103.02%;
 /* or 43px */
 color: #FFFFFF;
 padding: 13px 39px;
-background: linear-gradient(90deg, #FF8D8D 27.52%, #E9C92A 100%);
+background: #E9C92A;
 border-radius: 14.6569px;
 margin-top: 33.93px;
 margin-bottom: 44.99px;
@@ -167,6 +167,9 @@ margin-bottom: 44.99px;
     stroke-dashoffset: -134;
     stroke-width: 6;
   }
+  .vertical-align-middle{
+    vertical-align: middle !important;
+  }
 /* HERO SECTION */
 #hero{
     padding-bottom: 36.39px;
@@ -186,7 +189,7 @@ margin-bottom: 44.99px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+    /* text-fill-color: transparent; */
 
 }
 #hero p{
@@ -381,7 +384,7 @@ margin-bottom: 44.99px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+    /* text-fill-color: transparent; */
     margin-bottom: 47.03px;
     padding-top: 140.79px;
 }
@@ -491,11 +494,13 @@ margin-bottom: 44.99px;
     font-size: 35.9954px;
     line-height: 204.02%;
     text-align: center;
-    background: linear-gradient(90deg, #FF7C7C -11.88%, #F4A254 80.55%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    /* background: linear-gradient(90deg, #FF7C7C -11.88%, #F4A254 80.55%); */
+    color: #FFFFFF !important;
+    text-shadow: 0px 4px 14px #e9c92a;
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    /* background-clip: text; */
+    /* text-fill-color: transparent; */
 }
 #what-strata-one-can-do .can-do p{
     font-family: 'Poppins', sans-serif;
@@ -527,7 +532,8 @@ font-size: 79.8847px;
 line-height: 103.02%;
 /* or 82px */
 color: #FFFFFF;
-text-shadow: 0px 4.27025px 16.0135px #44BA1B;
+/* text-shadow: 0px 4.27025px 16.0135px #44BA1B; */
+text-shadow: 0px 4px 14px #e9c92a;
 padding-top: 44.6px;
 }
 #what-is-staking p{
@@ -645,15 +651,39 @@ color: #FFFFFF;
 #got-issues{
     background-color: white;
 }
+#got-issues input{
+    background-color: #00000000;
+    padding: 20px;
+    border-radius: 9px;
+    border: 1.5px solid #867100;
+}
+#got-issues textarea{
+    background-color: #00000000;
+    padding: 20px;
+    border-radius: 9px;
+    border: 1.5px solid #867100;
+}
+#got-issues button{
+    background-color: #00000000;
+    padding: 20px;
+    border-radius: 9px;
+    border: 1.5px solid #867100;
+}
+#got-issues button:hover{
+    background-color: #867100;
+    color: #D9D9D9;
+    border: 1.5px solid #867100;
+}
 #got-issues h2{
     font-family: 'Poppins', sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 79.8847px;
-line-height: 103.02%;
-color: #FFFFFF;
-text-shadow: 0px 4.27025px 16.0135px #44BA1B;
-padding-top: 45.45px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 79.8847px;
+    line-height: 103.02%;
+    color: #FFFFFF;
+    /* text-shadow: 0px 4.27025px 16.0135px #44BA1B; */
+    text-shadow: 0px 4px 14px #e9c92a;
+    padding-top: 45.45px;
 }
 #got-issues p{
     font-family: 'Poppins' , sans-serif;
