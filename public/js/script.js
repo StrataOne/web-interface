@@ -79,7 +79,7 @@ function oasisDetails() {
     headers: {"Content-Type": "application/json"},
     timeout: 5000,
     success: function (data) {
-        let totalApr = 0.5;
+        let totalApr = 7.8;
         let totalDelegation = Math.floor(parseInt(data.delegations_balance).toFixed(7));
         let str_totalD = totalDelegation.toString();
         totalDelegation = Number(str_totalD.slice(0, 7));
@@ -88,6 +88,7 @@ function oasisDetails() {
       console.log("OASIS BLOCKCHAIN");
       console.log("=======================================================================");
       console.log("Total Delegations:" + totalDelegation + ";    APR:" + totalApr + ";    Lock Up:" + lockup + ";    Total Delegators:" + totalDelegators);
+      // console.log(data);
       console.log("=======================================================================");
       $("#oasis-apy").html(totalApr);
       $("#oasis-total-delegation").html(totalDelegation);
@@ -95,7 +96,7 @@ function oasisDetails() {
     },
     error: function (err) {
       console.log(err);
-      $("#oasis-apy").html("0.5");
+      $("#oasis-apy").html("7.8");
       $("#oasis-total-delegation").html("1593651");
       $("#oasis-lockup").html("0");
     },
@@ -114,11 +115,13 @@ function persistenceDetails() {
       let totalDelegation = Math.floor(parseInt(mainData.delegator_shares).toFixed(5));
       let str_totalD = totalDelegation.toString();
       totalDelegation= Number(str_totalD.slice(0, 7));
-      let totalApr = parseFloat(mainData.commission.commission_rates.max_rate).toFixed(2);
+      // let totalApr = parseFloat(mainData.commission.commission_rates.max_rate).toFixed(2);
+      let totalApr = 31.9;
       let lockup = 0;
       console.log("PESISTENCE BLOCKCHAIN");
       console.log("=======================================================================");
       console.log("Total Delegations:" + totalDelegation + ";    APR:" + totalApr + ";    Lock Up:" + lockup);
+      console.log(mainData);
       console.log("=======================================================================");
       $("#persistence-apy").html(totalApr);
       $("#persistence-total-delegation").html(totalDelegation);
@@ -126,7 +129,7 @@ function persistenceDetails() {
     },
     error: function (err) {
       console.log(err);
-      $("#persistence-apy").html("0.10");
+      $("#persistence-apy").html("31.9");
       $("#persistence-total-delegation").html("2212440");
       $("#persistence-lockup").html("0");
     },
@@ -191,7 +194,8 @@ function velasDetails() {
     headers: {"Content-Type": "application/json"},
     timeout: 5000,
     success: function (data) {
-        let totalApr = parseFloat(data.validator.commission).toFixed(2);
+        // let totalApr = parseFloat(data.validator.commission).toFixed(2);
+        let totalApr = 10;
         let totalDelegation = Math.floor(parseInt(data.validator.activated_stake).toFixed(7));
         let str_totalD = totalDelegation.toString();
         totalDelegation= Number(str_totalD.slice(0, 7));
@@ -200,6 +204,7 @@ function velasDetails() {
       console.log("VELAS BLOCKCHAIN");
       console.log("=======================================================================");
       console.log("Total Delegations:" + totalDelegation + ";    APR:" + totalApr + ";    Lock Up:" + lockup + ";    Total Delegators:" + totalDelegators);
+      console.log(data);
       console.log("=======================================================================");
       $("#velas-apy").html(totalApr);
       $("#velas-total-delegation").html(totalDelegation);
@@ -207,7 +212,7 @@ function velasDetails() {
     },
     error: function (err) {
       console.log(err);
-      $("#velas-apy").html("0.00");
+      $("#velas-apy").html("10");
       $("#velas-total-delegation").html("2800039");
       $("#velas-lockup").html("0");
     },
