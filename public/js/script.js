@@ -219,6 +219,38 @@ function velasDetails() {
   });
 }
 
+// SENTINEL BLOCKCHAIN
+function sentinelDetails() {
+  $.ajax({
+    type: "GET",
+    url: "https://api.mintscan.io/v1/sentinel/validators/sentvaloper109yg6yhcyy5mfyteqmcn3pjca9nu9s392spdr9",
+    headers: {"Content-Type": "application/json"},
+    timeout: 5000,
+    success: function (data) {
+      console.log(data);
+      // let totalApr = parseFloat(data.validator.commission).toFixed(2);
+      let totalApr = 45;
+      let totalDelegation = Math.floor(parseInt(data.tokens).toFixed(8));
+      let str_totalD = totalDelegation.toString();
+      totalDelegation= Number(str_totalD.slice(0, 8));
+      let lockup = 0;
+      console.log("SENTINEL BLOCKCHAIN");
+      console.log("=======================================================================");
+      console.log("Total Delegations:" + totalDelegation + ";    APR:" + totalApr + ";    Lock Up:" + lockup + ";");
+      console.log(data);
+      console.log("=======================================================================");
+      $("#sentinel-apy").html(totalApr);
+      $("#sentinel-total-delegation").html(totalDelegation);
+      $("#sentinel-lockup").html(lockup);
+    },
+    error: function (err) {
+      console.log(err);
+     // $("#velas-apy").html("45");
+    //  $("#velas-total-delegation").html("2800039");
+    //  $("#velas-lockup").html("0");
+    },
+  });
+}
 
 
 window.onload = function () {
@@ -226,6 +258,7 @@ window.onload = function () {
     oasisDetails();
     persistenceDetails();
     findoraDetails();
-    velasDetails()
+    velasDetails();
+    sentinelDetails();
   };
   

@@ -12,11 +12,13 @@ async function priceCall() {
   let dataVelas = await CoinGeckoClient.coins.fetch('velas', {});
   let dataHarmony = await CoinGeckoClient.coins.fetch('harmony', {});
   let dataOasis = await CoinGeckoClient.coins.fetch('oasis-network', {});
+  let dataSentinel = await CoinGeckoClient.coins.fetch('sentinel', {});
   dataVelasPrice = parseFloat(dataVelas.data.market_data.current_price.usd).toFixed(3);
   dataHarmonyPrice = parseFloat(dataHarmony.data.market_data.current_price.usd).toFixed(3);
   dataOasisPrice = parseFloat(dataOasis.data.market_data.current_price.usd).toFixed(3);
   dataPersistencePrice = parseFloat(dataPersistence.data.market_data.current_price.usd).toFixed(3);
   dataFindoraPrice = parseFloat(dataFindora.data.market_data.current_price.usd).toFixed(3);
+  dataSentinelPrice = parseFloat(dataSentinel.data.market_data.current_price.usd).toFixed(3);
 }
 priceCall();
  setInterval(async function() {
@@ -25,11 +27,13 @@ priceCall();
   let dataVelas = await CoinGeckoClient.coins.fetch('velas', {});
   let dataHarmony = await CoinGeckoClient.coins.fetch('harmony', {});
   let dataOasis = await CoinGeckoClient.coins.fetch('oasis-network', {});
+  let dataSentinel = await CoinGeckoClient.coins.fetch('sentinel', {});
   dataVelasPrice = parseFloat(dataVelas.data.market_data.current_price.usd).toFixed(3);
   dataHarmonyPrice = parseFloat(dataHarmony.data.market_data.current_price.usd).toFixed(3);
   dataOasisPrice = parseFloat(dataOasis.data.market_data.current_price.usd).toFixed(3);
   dataPersistencePrice = parseFloat(dataPersistence.data.market_data.current_price.usd).toFixed(3);
   dataFindoraPrice = parseFloat(dataFindora.data.market_data.current_price.usd).toFixed(3);
+  dataSentinelPrice = parseFloat(dataSentinel.data.market_data.current_price.usd).toFixed(3);
 }, the_interval);
 
 app.set("view engine", "ejs");
@@ -54,7 +58,10 @@ app.get("/", async (req, res) =>{
   if(dataFindoraPrice == undefined || dataFindoraPrice == null|| dataFindoraPrice == "" ){
     dataFindoraPrice = 0.002;
   }
-  res.render("home",{dataVelasPrice, dataHarmonyPrice, dataOasisPrice, dataPersistencePrice, dataFindoraPrice});
+  if(dataSentinelPrice == undefined || dataSentinelPrice == null|| dataSentinelPrice == "" ){
+    dataSentinelPrice = 0.002;
+  }
+  res.render("home",{dataVelasPrice, dataHarmonyPrice, dataOasisPrice, dataPersistencePrice, dataFindoraPrice, dataSentinelPrice});
 });
 
 
