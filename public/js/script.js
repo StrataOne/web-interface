@@ -245,9 +245,9 @@ function sentinelDetails() {
     },
     error: function (err) {
       console.log(err);
-     // $("#velas-apy").html("45");
-    //  $("#velas-total-delegation").html("2800039");
-    //  $("#velas-lockup").html("0");
+      $("#sentinel-apy").html("45");
+      $("#sentinel-total-delegation").html("15777593");
+      $("#sentinel-lockup").html("0");
     },
   });
 }
