@@ -84,7 +84,7 @@ app.get("/", async (req, res) =>{
     dataFindoraPrice = 0.002;
   }
   if(dataSentinelPrice == undefined || dataSentinelPrice == null|| dataSentinelPrice == "" ){
-    dataSentinelPrice = 0.002;
+    dataSentinelPrice = 0.000;
   }
   res.render("home",{dataVelasPrice, dataHarmonyPrice, dataOasisPrice, dataPersistencePrice, dataFindoraPrice, dataSentinelPrice});
 });
